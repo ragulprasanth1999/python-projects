@@ -1,0 +1,37 @@
+import random
+lis = ["rock","paper","sicssor"]
+while True:
+    computer = random.choice(lis)
+    user = None
+    while user not in lis:
+        user = input("Enter rock,paper,sicssor:").lower()
+    if user == "rock" and computer == "rock":
+        print(user)
+        print("tie")
+    elif user == "rock" and computer == "sicssor":
+        print(user)
+        print("You win")
+    elif user == "rock" and computer == "paper":
+        print(user)
+        print("You loose") 
+    elif user == "paper" and computer == "paper":
+        print(user)
+        print(" tie") 
+    elif user == "paper" and computer == "rock":
+        print(user)
+        print(" you win")
+    elif user == "paper" and computer == "sicssor":
+        print(user)
+        print(" you loose")    
+    elif user == "sicssor" and computer == "sicssor":
+        print(user)
+        print(" tie") 
+    elif user == "sicssor" and computer == "rock":
+        print(user)
+        print(" you loose")
+    elif user == "sicssor" and computer == "paper":
+        print(user)
+        print(" you win") 
+    play_again = input("do you want to play again yes/no")
+    if play_again.strip().lower() != "yes":
+        break
