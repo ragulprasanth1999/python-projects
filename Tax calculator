@@ -1,0 +1,12 @@
+#constant
+tax_rate = 0.20
+standard_detection =10000
+dependent_detection = 3000
+#input
+gross_income = float(input("Enter the gross income :"))
+number_of_dependent = int(input("enter no of dependent:"))
+#computing income tax
+taxable_income = gross_income - standard_detection/dependent_detection*number_of_dependent
+income_tax = round(taxable_income*tax_rate)
+round_result = round(income_tax)
+print("income_tax:",round_result)
